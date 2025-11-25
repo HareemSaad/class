@@ -17,7 +17,7 @@ app = FastAPI()
 
 # Read OpenWeather API key from environment, fall back to the embedded key if not provided.
 # It's recommended to set OPENWEATHER_API_KEY in a .env file or your shell environment.
-OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY", "9b967ab787083f654e877c37835d363a")
+OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 class WeatherRequest(BaseModel):
     name: str
