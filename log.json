@@ -1,0 +1,55 @@
+[
+    {
+        "input": {
+            "name": "Sample City",
+            "location": "Test Location",
+            "longitude": -118.2437,
+            "latitude": 34.0522
+        },
+        "output": {
+            "coord": {
+                "lon": -118.2437,
+                "lat": 34.0522
+            },
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01n"
+                }
+            ],
+            "base": "stations",
+            "main": {
+                "temp": 284.62,
+                "feels_like": 283.89,
+                "temp_min": 281.99,
+                "temp_max": 287.31,
+                "pressure": 1018,
+                "humidity": 79,
+                "sea_level": 1018,
+                "grnd_level": 999
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 1.54,
+                "deg": 10
+            },
+            "clouds": {
+                "all": 0
+            },
+            "dt": 1764078789,
+            "sys": {
+                "type": 1,
+                "id": 4361,
+                "country": "US",
+                "sunrise": 1764081330,
+                "sunset": 1764117904
+            },
+            "timezone": -28800,
+            "id": 5368361,
+            "name": "Los Angeles",
+            "cod": 200
+        }
+    }
+]
