@@ -4,9 +4,20 @@ import httpx
 import json
 import os
 
+# Load environment variables from a local .env file (for local development).
+# This lets you keep OPENWEATHER_API_KEY in a .env file and have the app pick it up.
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except Exception:
+    # If python-dotenv isn't installed, we fall back to normal environment variables.
+    pass
+
 app = FastAPI()
 
-OPENWEATHER_API_KEY = "API_KEY_HERE"
+# Read OpenWeather API key from environment, fall back to the embedded key if not provided.
+# It's recommended to set OPENWEATHER_API_KEY in a .env file or your shell environment.
+OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY", "9b967ab787083f654e877c37835d363a")
 
 class WeatherRequest(BaseModel):
     name: str

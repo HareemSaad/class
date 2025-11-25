@@ -15,13 +15,38 @@ source .venv/bin/activate
 
 Notes:
 
-- If you prefer to create the venv manually, run:
-  ```bash
-  python3 -m venv .venv
-  source .venv/bin/activate
-  pip install -r requirements.txt
-  ```
-- The app uses the OpenWeather API. `server.py` currently contains a hard-coded key; for safety consider setting an environment variable instead and updating the code to read it (e.g. `OPENWEATHER_API_KEY`).
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Environment variables / .env
+
+The app will read `OPENWEATHER_API_KEY` from the environment if present. To store the key in the project and load it before running the server:
+
+1. Copy the example:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` and put your real API key on the `OPENWEATHER_API_KEY=` line.
+
+3. Export the variables into your shell session before starting the server:
+
+   ```bash
+   # POSIX (bash/zsh)
+   set -a
+   source .env
+   set +a
+   ```
+
+Alternatively, set the env var directly:
+
+```bash
+export OPENWEATHER_API_KEY=your_real_key_here
+```
 
 ## POST Request
 
