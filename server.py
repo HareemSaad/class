@@ -6,7 +6,7 @@ import os
 
 app = FastAPI()
 
-OPENWEATHER_API_KEY = "9b967ab787083f654e877c37835d363a"
+OPENWEATHER_API_KEY = "API_KEY_HERE"
 
 class WeatherRequest(BaseModel):
     name: str
